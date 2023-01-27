@@ -8,7 +8,7 @@ export default function Dashboard() {
 
     return (
         <div>
-            <section className="bg-bg_dark_grey py-32 w-screen h-sc h-screen sm-412:px-8 sm-428:px-8 2xl-1440:py-20 lg-1024:py-16">
+            <section className="bg-bg_dark_grey py-24 w-screen h-sc h-screen sm-412:px-8 sm-428:px-8 2xl-1440:py-20 lg-1024:py-16">
                 <div className="main-container">
                     <h1 className="text-[#fff] text-3xl text-center font-roboto font-extrabold mb-12 sm-375:mb-8 sm-425:text-base 2xl-1440:text-5xl 3xl-2560:text-5xl">Dashboard</h1>
 
