@@ -9,6 +9,18 @@ module.exports = {
 
   theme: {
     extend: {},
+
+    colors: {
+      bg_dark_grey: "#1E1E1E",
+      bg_white: '#fff'
+    
+    },
+
+    fontFamily: {
+
+      roboto: ['Roboto', 'sans-serif'],
+    
+    },
   },
 
 
