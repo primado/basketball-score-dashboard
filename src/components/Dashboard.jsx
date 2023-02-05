@@ -21,7 +21,7 @@ export default function Dashboard() {
 
                         <div className="shot-container">
                             <div className="shot">
-                                <h2 className="text-[#fff] text-3xl mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
+                                <h2 className="text-[#fff] text-3xl text-center mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
                                 > SHOTS
                                 </h2>
 
@@ -36,7 +36,7 @@ export default function Dashboard() {
                         <div className="score-container">
                             <div className="score">
 
-                                <h2 className="text-[#fff] text-3xl mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
+                                <h2 className="text-[#fff] text-3xl text-center mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
                                 > SCORE
                                 </h2>
 
@@ -48,7 +48,7 @@ export default function Dashboard() {
                         </div>
 
                         <div className="clock">
-                            <h2 className="text-[#fff] text-3xl font-roboto font-semibold mb-2 sm-412:text-xl sm-428:text-xl"
+                            <h2 className="text-[#fff] text-3xl text-center font-roboto font-semibold mb-2 sm-412:text-xl sm-428:text-xl"
                             > SHOT CLOCK
                             </h2>
                             <div className="clock-data text-[#000] font-roboto font-black text-center text-9xl bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60 sm-412:w-36 sm-412:h-40 sm-412:text-5xl sm-428:w-36 sm-428:h-40 sm-428:text-5xl"
