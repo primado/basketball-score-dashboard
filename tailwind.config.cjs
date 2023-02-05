@@ -22,6 +22,10 @@ module.exports = {
     
     },
 
+    backgroundImage: {
+      'home-bg': "url('src/assets/b-home.svg')",
+    },
+
     screens: {
       'sm-412': {'max': '420px'},
       'sm-414': {'max': '418px'},
