@@ -35,11 +35,14 @@ export default function controller() {
                     <div className="mb-10 mt-10">
                         <div className="flex flex-row items-baseline justify-center gap-10">
                             <div className="">
-                                <a href="#">
-                                    <img src={Console} alt="Console" className=" w-40 md-810:w-40 " 
-                                    />
-                                    <p className="text-center mt-2 font-montserrat text-2xl font-semibold md-690:text-xl">Game Mode</p>
-                                </a>
+                                <img src={Console} alt="Console" className=" w-40 md-810:w-40 " 
+                                />
+                                {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
+                                <select name="Game Modes" id="gmodes" className="font-montserrat font-semibold text-lg">
+                                    <option value="label">--Game Modes--</option>
+                                    <option value="single" className="">Single Player</option>
+                                    <option value="multi" className="">Multi Player</option>
+                                </select>
                             </div>
 
                             <div className="">
