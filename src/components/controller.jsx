@@ -38,7 +38,7 @@ export default function controller() {
                                 <img src={Console} alt="Console" className=" w-40 md-810:w-40 " 
                                 />
                                 {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
-                                <select name="Game Modes" id="gmodes" className="font-montserrat font-semibold text-lg">
+                                <select name="Game Modes" id="gmodes" className="font-montserrat font-semibold text-sm">
                                     <option value="label">--Game Modes--</option>
                                     <option value="single" className="">Single Player</option>
                                     <option value="multi" className="">Multi Player</option>
