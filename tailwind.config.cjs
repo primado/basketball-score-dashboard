@@ -28,7 +28,7 @@ module.exports = {
     },
 
     backgroundImage: {
-      'home-bg': "url('src/assets/b-home.svg')",
+      'home-bg': "url('/b-home.svg')",
     },
 
     screens: {
