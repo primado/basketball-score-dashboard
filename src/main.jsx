@@ -7,8 +7,8 @@ import {
 } from "react-router-dom";
 
 import App from './App'
-import Dashboard from './components/Dashboard';
 import Controller from './components/controller';
+import Config from './components/Configurations';
 import './index.css'
 
 
@@ -22,7 +22,12 @@ const router = createBrowserRouter([
   {
     path: "/controller",
     element: <Controller />,
-  }
+  },
+
+  {
+    path: "/config",
+    element: <Config />,
+  },
 
 ])
 

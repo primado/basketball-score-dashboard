@@ -4,6 +4,8 @@ module.exports = {
     "./index.html",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
+
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
 
 
@@ -56,7 +58,9 @@ module.exports = {
 
 
   plugins: [
-
+    
     require('@tailwindcss/forms'),
+    require('flowbite/plugin'),
+   
   ],
 }

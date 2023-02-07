@@ -21,7 +21,7 @@ export default function controller() {
                    
                     <form action="">
                         <div className="form__group w-full flex flex-col justify-center items-center mt-20">
-                            <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="">Player Name</label>
+                            <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="player name">Player Name</label>
                             <input className="form-input w-7/12 font-normal font-roboto rounded-lg bg-[#D9D9D9]"
                              type="text"  placeholder="Player Name" 
                             />
