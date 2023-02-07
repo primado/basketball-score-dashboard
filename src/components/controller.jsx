@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 //images
 import Console from "../assets/console.svg";
@@ -29,6 +30,9 @@ export default function controller() {
                             <input   className="bg-black text-white font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:ease-in-out hover:duration-300"
                             type="button" name="" value="Start Game"
                              />
+                            <input   className="text-black border-2 border-gray-600 font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-300"
+                            type="button" name="" value="Reset"
+                             />
                         </div>  
                     </form>
 
@@ -46,17 +50,17 @@ export default function controller() {
                             </div>
 
                             <div className="">
-                                <a href="#">
+                                <a href="https://afrilogicsolutions.com" target="_blank">
                                     <img src={Afrilogic} alt="Afrilogic Solutions Logo" />
                                 </a>
                             </div>
 
                             <div className="">
-                                <a href="#">
+                                <Link to={`/config`}>
                                     <img src={Settings} alt="Settings" className=" w-28 md-810:w-28 md-690:w-24"
                                     />
                                     <p className="text-center mt-2 font-montserrat text-2xl font-semibold">Settings</p>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
