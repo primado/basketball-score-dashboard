@@ -38,32 +38,32 @@ export default function Config() {
                             </div>
 
                                 <div className="flex justify-center items-center flex-row gap-16">
-                                   
-                                   <Dropdown label="Select Option" dismissOnClick={true} class="bg-[#D9D9D9] font-montserrat font-semibold text-xl">
-
-                                        <Dropdown.Item className="bg-red-600 w-36 h-8 mb-2 hover:bg-red-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-yellow-400 w-36 h-8 mb-2 hover:bg-yellow-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-green-600 w-36 h-8 hover:bg-green-500"></Dropdown.Item>
-
-                                   </Dropdown>
-                                   <Dropdown label="Select Option" dismissOnClick={true} class="bg-[#D9D9D9] font-montserrat font-semibold text-xl " >
-
-                                        <Dropdown.Item className="bg-red-600 w-36 h-8 mb-2 hover:bg-red-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-yellow-400 w-36 h-8 mb-2 hover:bg-yellow-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-green-600 w-36 h-8 hover:bg-green-500"></Dropdown.Item>
-
-                                   </Dropdown>
-
-                                   <Dropdown label="Select Option" dismissOnClick={true} class="bg-[#D9D9D9] font-montserrat font-semibold text-xl">
-
-                                        <Dropdown.Item className="bg-red-600 w-36 h-8 mb-2 hover:bg-red-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-yellow-400 w-36 h-8 mb-2 hover:bg-yellow-500"></Dropdown.Item>
-                                        <Dropdown.Item className="bg-green-600 w-36 h-8 hover:bg-green-500"></Dropdown.Item>
-
-                                   </Dropdown>
 
 
-
+                                    <div className="p-shot flex flex-col">
+                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Perfect Shot</label>
+                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9]">
+                                            <option value="1" selected>Red</option>
+                                            <option value="2">Yellow</option>
+                                            <option value="3">Green</option>
+                                        </select>
+                                    </div>
+                                    <div className="p-shot flex flex-col">
+                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Miss Shot</label>
+                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9]">
+                                            <option value="1" selected>Red</option>
+                                            <option value="2">Yellow</option>
+                                            <option value="3">Green</option>
+                                        </select>
+                                    </div>
+                                    <div className="p-shot flex flex-col">
+                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Bank Shot</label>
+                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9]">
+                                            <option value="1" selected>Red</option>
+                                            <option value="2">Yellow</option>
+                                            <option value="3">Green</option>
+                                        </select>
+                                    </div>
                                 
                                 </div>
 
