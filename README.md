@@ -9,6 +9,8 @@
 
 Website Link: https://bball-dashboard.netlify.app/
 
+Vercel Link: https://basketball-score-dashboard.vercel.app/
+
 
 App Route: 
 
