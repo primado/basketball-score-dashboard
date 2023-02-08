@@ -43,7 +43,7 @@ export default function controller() {
                                 />
                                 {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
                                 <select name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat font-semibold text-sm rounded-lg">
-                                    <option value="label">--Game Modes--</option>
+                                    <option value="label" disabled selected>--Game Modes--</option>
                                     <option value="single" className="">Single Player</option>
                                     <option value="multi" className="">Multi Player</option>
                                 </select>
