@@ -39,10 +39,10 @@ export default function controller() {
                     <div className="mb-10 mt-10">
                         <div className="flex flex-row items-baseline justify-center gap-10">
                             <div className="">
-                                <img src={Console} alt="Console" className=" w-40 md-810:w-40 " 
+                                <img src={Console} alt="Console" className=" w-32 md-810:w-40 " 
                                 />
                                 {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
-                                <select name="Game Modes" id="gmodes" className="font-montserrat font-semibold text-sm">
+                                <select name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat font-semibold text-sm rounded-lg">
                                     <option value="label">--Game Modes--</option>
                                     <option value="single" className="">Single Player</option>
                                     <option value="multi" className="">Multi Player</option>
@@ -51,13 +51,13 @@ export default function controller() {
 
                             <div className="">
                                 <a href="https://afrilogicsolutions.com" target="_blank">
-                                    <img src={Afrilogic} alt="Afrilogic Solutions Logo" />
+                                    <img src={Afrilogic} alt="Afrilogic Solutions Logo" className="w-40"/>
                                 </a>
                             </div>
 
                             <div className="">
                                 <Link to={`/config`}>
-                                    <img src={Settings} alt="Settings" className=" w-28 md-810:w-28 md-690:w-24"
+                                    <img src={Settings} alt="Settings" className=" w-20 md-810:w-20 md-690:w-20"
                                     />
                                     <p className="text-center mt-2 font-montserrat text-2xl font-semibold">Settings</p>
                                 </Link>
