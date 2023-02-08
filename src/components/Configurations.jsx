@@ -13,9 +13,12 @@ export default function Config() {
             <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex justify-center items-center flex-col md-810:w-screen md-810:h-screen  md-810:flex md-810:justify-start md-810:items-center md-810:py-16">
                 <h1 className="text-white text-4xl font-montserrat font-extrabold my-8">Settings</h1>
 
-                <div className="bg-white w-7/12 py-16 rounded-lg  md-810:w-10/12 md-690:px-10">
+                <div className="bg-white w-7/12 py-16 rounded-lg md-810:w-10/12 md-690:px-10">
                     <div className="container">
                         <form action="" className="font-montserrat">
+                            <div className="form__group w-full flex justify-end items-end pr-10 mb-7">
+                                <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-300"/>
+                            </div>
                             <div className="form__group flex justify-center items-center flex-row mb-8">
                                 <label className="font-semibold text-2xl mr-10 md-690:text-lg" htmlFor="">TIMER SETTINGS</label>
                                 <input className="font-roboto font-medium text-lg bg-[#D9D9D9]" type="text" placeholder="Time..." />
