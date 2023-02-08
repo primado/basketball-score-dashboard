@@ -40,37 +40,33 @@ export default function Config() {
                                 {/* <div className="hidden">5</div> */}
                             </div>
 
-                                <div className="flex justify-center items-center flex-row gap-16">
-
-
-                                    <div className="p-shot flex flex-col">
-                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Perfect Shot</label>
-                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
-                                            <option value="1" selected>Red</option>
-                                            <option value="2">Yellow</option>
-                                            <option value="3">Green</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-shot flex flex-col">
-                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Miss Shot</label>
-                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
-                                            <option value="1" selected>Red</option>
-                                            <option value="2">Yellow</option>
-                                            <option value="3">Green</option>
-                                        </select>
-                                    </div>
-                                    <div className="p-shot flex flex-col">
-                                        <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Bank Shot</label>
-                                        <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
-                                            <option value="1" selected>Red</option>
-                                            <option value="2">Yellow</option>
-                                            <option value="3">Green</option>
-                                        </select>
-                                    </div>
-                                
+                            <div className="flex justify-center items-center flex-row gap-16">
+                                <div className="p-shot flex flex-col">
+                                    <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Perfect Shot</label>
+                                    <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
+                                        <option value="1" selected>Red</option>
+                                        <option value="2">Yellow</option>
+                                        <option value="3">Green</option>
+                                    </select>
                                 </div>
-
+                                <div className="p-shot flex flex-col">
+                                    <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Miss Shot</label>
+                                    <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
+                                        <option value="1" selected>Red</option>
+                                        <option value="2">Yellow</option>
+                                        <option value="3">Green</option>
+                                    </select>
+                                </div>
+                                <div className="p-shot flex flex-col">
+                                    <label htmlFor="perfect-shot" className="font-montserrat font-semibold text-xl">Bank Shot</label>
+                                    <select name="" id="perfect-shot" className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg">
+                                        <option value="1" selected>Red</option>
+                                        <option value="2">Yellow</option>
+                                        <option value="3">Green</option>
+                                    </select>
+                                </div>
                             
+                            </div>
 
                         </form>
                     </div>
