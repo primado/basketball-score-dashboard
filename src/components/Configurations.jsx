@@ -19,13 +19,13 @@ export default function Config() {
                             <div className="form__group w-full flex justify-end items-end pr-10 mb-7">
                                 <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-500"/>
                             </div>
-                            <div className="form__group flex justify-center items-center flex-row mb-8">
-                                <label className="font-semibold text-2xl mr-10 md-690:text-lg" htmlFor="">TIMER SETTINGS</label>
+                            <div className="form__group flex justify-center items-center flex-row mb-8 gap-14">
+                                <label className="font-semibold text-2xl md-690:text-lg" htmlFor="">TIMER SETTINGS</label>
                                 <input className="font-roboto form-input font-medium text-base bg-[#D9D9D9] rounded-lg" type="text" placeholder="Timer..." />
                             </div>
 
-                            <div className=" flex justify-center items-center flex-row mb-8">
-                                <label htmlFor="" className="font-semibold text-2xl mr-14 md-690:text-lg">Videos</label>
+                            <div className=" flex justify-center items-center flex-row mb-8 gap-24">
+                                <label htmlFor="" className="font-semibold text-2xl md-690:text-lg">Videos</label>
                                 <div className="flex flex-row justify-end w-36 items-end bg-[#D9D9D9]">
                                     <input type="file" id="upload" hidden/>
                                     <label htmlFor="upload" className="bg-black flex justify-center items-center w-10 ">
