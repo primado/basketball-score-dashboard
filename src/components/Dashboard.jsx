@@ -51,11 +51,11 @@ export default function Dashboard() {
                         </div>
 
                         <div className="username">
-                            <h2 className="font-montserrat text-2xl font-semibold text-white">Username</h2>
+                            <h2 className="font-montserrat text-3xl font-semibold text-white">Username</h2>
                         </div>
 
                         <div className="clock">
-                            <h2 className="text-[#fff] text-3xl text-center font-roboto font-semibold mb-2 md-690:text-3xl"
+                            <h2 className="text-[#fff] text-3xl text-center font-roboto font-bold mb-2 md-690:text-3xl"
                             > SHOT CLOCK
                             </h2>
                             <div className="clock-data text-[#000] font-roboto font-black text-center text-9xl bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60  md-810:w-48 md-810:text-9xl md-690:text-8xl md-690:h-48"
