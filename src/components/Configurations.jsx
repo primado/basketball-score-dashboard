@@ -21,7 +21,7 @@ export default function Config() {
                             </div>
                             <div className="form__group flex justify-center items-center flex-row mb-8 gap-14">
                                 <label className="font-semibold text-2xl md-690:text-lg" htmlFor="">TIMER SETTINGS</label>
-                                <input className="font-roboto form-input font-medium text-base bg-[#D9D9D9] rounded-lg" type="text" placeholder="Timer..." />
+                                <input className="font-roboto form-input font-medium text-base bg-[#D9D9D9] rounded-lg" type="number" placeholder="Timer..." />
                             </div>
 
                             <div className=" flex justify-center items-center flex-row mb-8 gap-24">
