@@ -5,6 +5,10 @@ import React from "react";
 import crown from "../assets/crown.svg"
 
 
+
+
+
+
 export default function Leaderboard() {
 
     return (
@@ -13,8 +17,8 @@ export default function Leaderboard() {
                 <div className="font-montserrat font-bold text-white text-3xl">
                     <h1>LEADERBOARD</h1>
                 </div>
-                <div className="bg-white w-3/6 flex justify-center items-center py-12 rounded-lg">
-                    <table className="border-collapse w-4/5 font-montserrat">
+                <div className="bg-white w-3/6 flex justify-center items-center py-12 rounded-lg md-810:w-4/5">
+                    <table className="border-collapse w-4/5 font-montserrat ">
                         <thead>
                             <tr className="bg-[#D9D9D9] h-10">
                                 <th className="border-r border-black font-semibold">PLAYER</th>
@@ -22,7 +26,7 @@ export default function Leaderboard() {
                                 <th className="border-none border-black font-semibold">PERFECT SHOTS</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="font-montserrat">
                             <tr className="text-center h-12 bg-[#CECACA]">
                                 <td className="border-r border-slate-700  font-medium">
                                     <div className="flex flex-row justify-center items-center gap-2">
