@@ -17,4 +17,4 @@ App Route:
 1. path("/")
 2. path("/controller")
 3. path("/config")
-
+4. path("/leaderboard")
