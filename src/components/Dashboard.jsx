@@ -79,41 +79,41 @@ export default function Dashboard() {
         
 
      
-      useEffect(() => {
-        const ws = new WebSocket("ws://192.168.1.100:8081");
-        setSocket(ws);
+      // useEffect(() => {
+      //   const ws = new WebSocket("ws://192.168.1.100:8081");
+      //   setSocket(ws);
     
-        ws.onopen = () => {
-          console.log("WebSocket connection established");
-        };
+      //   ws.onopen = () => {
+      //     console.log("WebSocket connection established");
+      //   };
     
-        ws.onmessage = (event) => {
-            const data = JSON.parse(event.data);
-            shot = data['shot'];
-            color = data['color'];
-            if(color === "blue" && shot > 0){
-                score = score + 2;
-            }
-            else if(color === 'green' && shot > 0){
-              score = score + 3;
-              perfectShot = perfectShot + 1;
-            }
-            else if(color === 'red'){
-              console.log("Miss");
+      //   ws.onmessage = (event) => {
+      //       const data = JSON.parse(event.data);
+      //       shot = data['shot'];
+      //       color = data['color'];
+      //       if(color === "blue" && shot > 0){
+      //           score = score + 2;
+      //       }
+      //       else if(color === 'green' && shot > 0){
+      //         score = score + 3;
+      //         perfectShot = perfectShot + 1;
+      //       }
+      //       else if(color === 'red'){
+      //         console.log("Miss");
                
-            }
-        };
+      //       }
+      //   };
     
-        ws.onerror = (error) => {
-          console.error(`WebSocket error: ${error}`);
-        };
+      //   ws.onerror = (error) => {
+      //     console.error(`WebSocket error: ${error}`);
+      //   };
         
     
-        return () => {
+      //   return () => {
         
-          ws.close();
-        };
-      }, []);
+      //     ws.close();
+      //   };
+      // }, []);
 
     return (
         <div>
