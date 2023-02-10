@@ -20,11 +20,16 @@ export default function controller() {
 
                 <div className="bg-white w-7/12 rounded-xl  md-810:w-10/12 md-690:px-10">
                    
-                    <form action="">
+                    <form action="" onSubmit={handleSubmit}>
                         <div className="form__group w-full flex flex-col justify-center items-center mt-20">
                             <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="player name">Player Name</label>
                             <input className="form-input w-7/12 font-normal font-roboto rounded-lg bg-[#D9D9D9]"
-                             type="number"  placeholder="Player Name" 
+                             type="text"
+                             id="player_name1"
+                             name="player_name1"
+                             value={formData.player_name1}
+                             onChange={handleChange}
+                             placeholder="Player Name" 
                             />
 
                             <input   className="bg-black text-white font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:ease-in-out hover:duration-300"
