@@ -24,12 +24,13 @@ const wss2 = new WebSocketServer.Server({
   host:'192.168.1.100' 
 })
 
-const corsOptions = {
-  origin: 'http://192.168.1.100:5173',
-  optionsSuccessStatus: 200
-}
+// const corsOptions = {
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   origin: 'http://192.168.1.100:5173',
+//   optionsSuccessStatus: 200
+// }
 
-app.use(cors(corsOptions));
+app.use(cors('*'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

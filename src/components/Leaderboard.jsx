@@ -1,16 +1,23 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 
 
 // images
 import crown from "../assets/crown.svg"
-
+var address = import.meta.env.VITE_IP_ADDRESS;
 
 
 
 
 
 export default function Leaderboard() {
+    const [players, setPlayers] = useState([]);
 
+    useEffect(() => {
+      fetch("http://"+address+":5000/players")
+        .then(res => res.json())
+        .then(data => setPlayers(data));
+    }, []);
+  
     return (
         <div className="leaderboard">
              <section className="bg-home-bg bg-no-repeat bg-center bg-cover py-12  flex flex-col  gap-8 justify-start items-center w-screen h-screen">
@@ -27,16 +34,19 @@ export default function Leaderboard() {
                             </tr>
                         </thead>
                         <tbody className="font-montserrat">
-                            <tr className="text-center h-12 bg-[#CECACA]">
+                        {players.map((player, index) => (
+                            <tr className="text-center h-12 bg-[#CECACA]" key={index}>
                                 <td className="border-r border-slate-700  font-medium">
                                     <div className="flex flex-row justify-center items-center gap-2">
-                                        <img src={crown} alt="crown" className="" />
-                                        <span className="">Selvien</span>
+                                        {/* <img src={crown} alt="crown" className="" />
+                                        <span className="">Sylvian</span> */}
+                                        {index < 3 && <i className="fas fa-crown" pla />}{player.player_name}
                                     </div>
                                 </td>
-                                <td className="border-r border-black font-medium">10</td>
-                                <td className="border-none border-black font-medium">5</td>
+                                <td className="border-r border-black font-medium">{player.perfect_shot}</td>
+                                <td className="border-none border-black font-medium">{player.score}</td>
                             </tr>
+                        ))}
                         </tbody>
                     </table>
                 </div>
