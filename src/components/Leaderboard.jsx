@@ -20,7 +20,7 @@ export default function Leaderboard() {
   
     return (
         <div className="leaderboard">
-             <section className="bg-home-bg bg-no-repeat bg-center bg-cover py-12  flex flex-col  gap-8 justify-start items-center w-screen h-screen">
+             <section className="bg-home-bg bg-no-repeat bg-center bg-cover py-12  flex flex-col  gap-8 justify-start items-center w-screen h-full">
                 <div className="font-montserrat font-bold text-white text-3xl">
                     <h1>LEADERBOARD</h1>
                 </div>
@@ -40,8 +40,9 @@ export default function Leaderboard() {
                                     <div className="flex flex-row justify-center items-center gap-2">
                                         {/* <img src={crown} alt="crown" className="" />
                                         <span className="">Sylvian</span> */}
-                                        {index < 3 && <i className="fas fa-crown" />}{player.player_name}
+                                        {index < 3 && <i className="fas fa-crown" pla />}{player.player_name}
                                     </div>
+                                    
                                 </td>
                                 <td className="border-r border-black font-medium">{player.perfect_shot}</td>
                                 <td className="border-none border-black font-medium">{player.score}</td>
