@@ -68,12 +68,13 @@ export default function controller() {
                              name="player_name1"
                              value={formData.player_name1}
                              onChange={handleChange}
+                             placeholder="Player 1"
                             />
 
                             {selectedOption === 'multi' && (
                                     
                                 <div className="form__group w-full flex flex-col justify-center items-center mt-4">
-                                    <label className="font-montserrat font-medium text-2xl" htmlFor="player2">PLAYER 2</label>
+                                    <label className="font-montserrat font-medium text-2xl" htmlFor="player2">Player Name</label>
 
                                     <input
                                     type="text"
@@ -81,6 +82,7 @@ export default function controller() {
                                     name="player_name2"
                                     value={formData.player_name2}
                                     onChange={handleChange}
+                                    placeholder="Player 2"
                                     className="form-input w-7/12 font-normal font-roboto rounded-lg bg-[#D9D9D9]"
                                     />
                                 </div>
