@@ -27,13 +27,10 @@ export default function Config() {
         };
     
         return () => {
-          ws.close();
-        };
+         };
       }, []);
     
-      // const handleSend = () => {
-      //   socket.send(formData);
-      // };
+      
     
       
       const handleChange = event => {
@@ -61,8 +58,7 @@ export default function Config() {
           socket.send(JSON.stringify(formData));
       };
 
-      console.log(formData);
-
+ 
     return (
         <div>
             <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex justify-center items-center flex-col md-810:w-screen md-810:h-screen  md-810:flex md-810:justify-start md-810:items-center md-810:py-16">
