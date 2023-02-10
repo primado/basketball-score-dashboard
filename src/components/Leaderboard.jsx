@@ -43,7 +43,7 @@ export default function Leaderboard() {
                                         </div>
                                         {player.player_name}
                                     </div>
-                                    
+                                    // New branch
                                 </td>
                                 <td className="border-r border-black font-medium">{player.perfect_shot}</td>
                                 <td className="border-none border-black font-medium">{player.score}</td>
