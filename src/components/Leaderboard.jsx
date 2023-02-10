@@ -40,7 +40,7 @@ export default function Leaderboard() {
                                     <div className="flex flex-row justify-center items-center gap-2">
                                         {/* <img src={crown} alt="crown" className="" />
                                         <span className="">Sylvian</span> */}
-                                        {index < 3 && <i className="fas fa-crown" pla />}{player.player_name}
+                                        {index < 3 && <i className="fas fa-crown" />}{player.player_name}
                                     </div>
                                 </td>
                                 <td className="border-r border-black font-medium">{player.perfect_shot}</td>
