@@ -151,7 +151,7 @@ export default function Dashboard() {
                       <div className="flex justify-between mx-16 items-center" >  
                           
                       <div className="score-container">
-                            <div className="score">
+                          <div className="score">
 
                                 <h2 className="text-[#fff] text-3xl text-center mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
                                 > SCORE
