@@ -37,10 +37,11 @@ export default function Leaderboard() {
                         {players.map((player, index) => (
                             <tr className="text-center h-12 bg-[#CECACA]" key={index}>
                                 <td className="border-r border-slate-700  font-medium">
-                                    <div className="flex flex-row justify-center items-center gap-2">
-                                        {/* <img src={crown} alt="crown" className="" />
-                                        <span className="">Sylvian</span> */}
-                                        {index < 3 && <i className="fas fa-crown" pla />}{player.player_name}
+                                    <div className="flex pl-4 flex-row justify-start items-center gap-6">
+                                        <div className="flex flex-row  ">
+                                            {index < 3 && <i className="fas fa-crown" pla />}
+                                        </div>
+                                        {player.player_name}
                                     </div>
                                     // New branch
                                 </td>
