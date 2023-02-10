@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Outlet, Link } from "react-router-dom";
 
 //images
@@ -10,6 +10,45 @@ import Afrilogic from "../assets/afrilogic.svg";
 
 
 export default function controller() {
+
+    const [selectedOption, setSelectedOption] = useState('');
+
+  const [formData, setFormData] = useState({
+    player_name1: '',
+    player_name2: '',
+    game_mode: '',
+  });
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+    formData.game_mode=event.target.value;
+  };
+
+  const handleChange = event => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+  };
+  
+  const handleSubmit = event => {
+    event.preventDefault();
+    fetch('/cont', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
+      
+  };
+
     return (
         <div>
 
@@ -32,8 +71,24 @@ export default function controller() {
                              placeholder="Player Name" 
                             />
 
-                            <input   className="bg-black text-white font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:ease-in-out hover:duration-300"
-                            type="button" name="" value="Start Game"
+                            {selectedOption === 'multi' && (
+                                    
+                                    <div className="form__group w-full flex flex-col justify-center items-center mt-20">
+                                    <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="player2">PLAYER 2</label>
+
+                                    <input
+                                    type="text"
+                                    id="player_name2"
+                                    name="player_name2"
+                                    value={formData.player_name2}
+                                    onChange={handleChange}
+                                    className="form-input w-7/12 font-normal font-roboto rounded-lg bg-[#D9D9D9]"
+                                    />
+                                </div>
+                                )}
+
+                            <input className="bg-black text-white font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:ease-in-out hover:duration-300"
+                            type="submit" name="" value="Start Game"
                              />
                             <input   className="text-black border-2 border-gray-600 font-montserrat font-bold text-xl w-52 py-3 rounded-lg mt-5 hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-300"
                             type="button" name="" value="Reset"
@@ -47,7 +102,7 @@ export default function controller() {
                                 <img src={Console} alt="Console" className=" w-32 md-810:w-40 " 
                                 />
                                 {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
-                                <select name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat font-semibold text-sm rounded-lg">
+                                <select value={selectedOption} onChange={handleOptionChange} name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat font-semibold text-sm rounded-lg">
                                     <option value="label" disabled selected>--Game Modes--</option>
                                     <option value="single" className="">Single Player</option>
                                     <option value="multi" className="">Multi Player</option>
