@@ -6,7 +6,7 @@ import Console from "../assets/console.svg";
 import Settings from "../assets/settings.svg";
 import Afrilogic from "../assets/afrilogic.svg";
 
-
+var address = import.meta.env.VITE_IP_ADDRESS;
 
 
 export default function controller() {
@@ -33,7 +33,8 @@ export default function controller() {
   
   const handleSubmit = event => {
     event.preventDefault();
-    fetch('/cont', {
+    console.log(formData)
+    fetch('http://'+address+':5000/cont', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -48,7 +49,6 @@ export default function controller() {
 
       
   };
-console.log(formData)
     return (
         <div>
 

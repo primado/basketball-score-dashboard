@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react";
-
+var address = import.meta.env.VITE_IP_ADDRESS;
 export default function Config() { 
     const [formData, setFormData] = useState({
         Timer: '',
@@ -11,7 +11,7 @@ export default function Config() {
       const [socket, setSocket] = useState(null);
     
       useEffect(() => {
-        const ws = new WebSocket("ws://192.168.1.100:8082");
+        const ws = new WebSocket("ws://"+address+":8082");
         setSocket(ws);
     
         ws.onopen = () => {
@@ -45,7 +45,7 @@ export default function Config() {
     
       const handleSubmit = event => {
         event.preventDefault();
-        fetch('/conf', {
+        fetch('http://'+address+':5000/conf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -60,6 +60,8 @@ export default function Config() {
     
           socket.send(JSON.stringify(formData));
       };
+
+      console.log(formData);
 
     return (
         <div>
