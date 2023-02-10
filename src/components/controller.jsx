@@ -52,7 +52,7 @@ export default function controller() {
     return (
         <div>
 
-            <section className="bg-home-bg bg-no-repeat bg-center bg-cover flex justify-center items-center flex-col w-screen h-screen font-roboto md-810:h-screen md-810:flex md-810:justify-start md-810:items-center md-810:py-16">
+            <section className="bg-home-bg bg-no-repeat bg-center bg-cover pb-20 flex justify-center items-center flex-col w-screen h-screen font-roboto md-810:h-screen md-810:flex md-810:justify-start md-810:items-center md-810:py-16">
                 <div>
                     <h1 className="text-white text-4xl font-extrabold my-8 ">Game Controller</h1>
                 </div>
@@ -60,7 +60,7 @@ export default function controller() {
                 <div className="bg-white w-7/12 rounded-xl  md-810:w-10/12 md-690:px-10">
                    
                     <form action="" onSubmit={handleSubmit}>
-                        <div className="form__group w-full flex flex-col justify-center items-center mt-20">
+                        <div className="form__group w-full flex flex-col justify-center items-center mt-16">
                             <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="player name">Player Name</label>
                             <input className="form-input w-7/12 font-normal font-roboto rounded-lg bg-[#D9D9D9]"
                              type="text"
@@ -68,13 +68,12 @@ export default function controller() {
                              name="player_name1"
                              value={formData.player_name1}
                              onChange={handleChange}
-                             placeholder="Player Name" 
                             />
 
                             {selectedOption === 'multi' && (
                                     
-                                    <div className="form__group w-full flex flex-col justify-center items-center mt-20">
-                                    <label className="font-montserrat font-medium text-2xl mb-2" htmlFor="player2">PLAYER 2</label>
+                                <div className="form__group w-full flex flex-col justify-center items-center mt-4">
+                                    <label className="font-montserrat font-medium text-2xl" htmlFor="player2">PLAYER 2</label>
 
                                     <input
                                     type="text"
@@ -102,7 +101,7 @@ export default function controller() {
                                 <img src={Console} alt="Console" className=" w-32 md-810:w-40 " 
                                 />
                                 {/* <label className="text-center mt-2 font-montserrat text-md font-semibold md-690:text-xl">Game Mode:</label> */}
-                                <select value={selectedOption} onChange={handleOptionChange} name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat font-semibold text-sm rounded-lg">
+                                <select value={selectedOption} onChange={handleOptionChange} name="Game Modes" id="gmodes" className="bg-[#D9D9D9] font-montserrat w-40 font-semibold text-sm rounded-lg">
                                     <option value="label" disabled selected>--Game Modes--</option>
                                     <option value="single" className="">Single Player</option>
                                     <option value="multi" className="">Multi Player</option>
