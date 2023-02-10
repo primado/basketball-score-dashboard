@@ -8,6 +8,7 @@ import {
 
 import App from './App'
 import Controller from './components/controller';
+import Controller_2 from './components/Controller_2';
 import Config from './components/Configurations';
 import Leaderboard from './components/Leaderboard';
 import './index.css'
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
   {
     path: "/leaderboard",
     element: <Leaderboard />,
+  },
+
+  {
+    path: "/controller-2",
+    element: <Controller_2 />
   }
 
 ])
