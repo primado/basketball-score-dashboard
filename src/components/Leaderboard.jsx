@@ -30,7 +30,7 @@ export default function Leaderboard() {
                             <tr className="bg-[#D9D9D9] h-10">
                                 <th className="border-r border-black font-semibold">PLAYER</th>
                                 <th className="border-r border-black font-semibold">POINTS</th>
-                                <th className="border-none border-black font-semibold">PERFECT SHOTS</th>
+                                <th className="border-none border-black font-semibold">PERFECT SHOTS SHOTS</th>
                             </tr>
                         </thead>
                         <tbody className="font-montserrat">
@@ -42,7 +42,7 @@ export default function Leaderboard() {
                                         <span className="">Sylvian</span> */}
                                         {index < 3 && <i className="fas fa-crown" pla />}{player.player_name}
                                     </div>
-                                    
+                                    // New branch
                                 </td>
                                 <td className="border-r border-black font-medium">{player.perfect_shot}</td>
                                 <td className="border-none border-black font-medium">{player.score}</td>
