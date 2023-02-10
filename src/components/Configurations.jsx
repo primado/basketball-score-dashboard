@@ -105,9 +105,9 @@ export default function Config() {
                                     name="Perfect_shot"
                                     value={formData.Perfect_shot}
                                     onChange={handleChange}
-                                    className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg"
+                                    className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg" 
                                     >
-                                    <option value="">Select an option</option>
+                                    <option value="" disabled selected>Select an option</option>
                                     <option value="g">Green</option>
                                     <option value="w">White</option>
                                     <option value="v">Violet</option>
@@ -122,7 +122,7 @@ export default function Config() {
                                     onChange={handleChange}
                                     className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg"
                                     >
-                                        <option value="">Select an option</option>
+                                        <option value="" disabled selected>Select an option</option>
                                         <option value="r">Red</option>
                                         <option value="o">Orange</option>
                                         <option value="g">Gray</option>
@@ -137,7 +137,7 @@ export default function Config() {
                                     onChange={handleChange}
                                     className="font-montserrat font-medium text-base bg-[#D9D9D9] rounded-lg"
                                     >
-                                        <option value="">Select an option</option>
+                                        <option value="" disabled selected>Select an option</option>
                                         <option value="b">Blue</option>
                                         <option value="y">Yellow</option>
                                         <option value="p">Pink</option>
