@@ -1,6 +1,4 @@
 import React from "react";
-import { Flowbite } from "flowbite-react";
-import { Dropdown } from "flowbite-react";
 
 
 //images
