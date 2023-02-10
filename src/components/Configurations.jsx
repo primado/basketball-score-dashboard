@@ -47,12 +47,14 @@ export default function Config() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
         })
-          .then(response => response.json())
+          .then(response => response)
           .then(data => {
-            console.log('Success:', data);
+            if (data.status === 200){
+                alert("Settings Saved");
+              }
           })
           .catch(error => {
-            console.error('Error:', error);
+            alert('Error:', error);
           });
     
           socket.send(JSON.stringify(formData));
