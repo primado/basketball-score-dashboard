@@ -96,6 +96,9 @@ export default function Dashboard() {
     };
 
     const handleStop = () => { 
+       shot = 0;
+       score = 0;
+       perfectShot = 0;
       setIsActive(isActive);
     };
 
@@ -111,6 +114,7 @@ export default function Dashboard() {
         };
     
         ws.onmessage = (event) => {
+          if(isActive){
             const data = JSON.parse(event.data);
             shot = data['shot'];
             color = data['color'];
@@ -125,6 +129,7 @@ export default function Dashboard() {
               console.log("Miss");
                
             }
+          }
         };
     
         ws.onerror = (error) => {
