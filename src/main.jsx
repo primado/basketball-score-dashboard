@@ -12,6 +12,7 @@ import Controller_2 from './components/Controller_2';
 import Config from './components/Configurations';
 import Leaderboard from './components/Leaderboard';
 import './index.css'
+import 'semantic-ui-css/semantic.min.css'
 
 
 
