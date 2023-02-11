@@ -100,17 +100,12 @@ export default function Controller_2() {
                     <h1 className="font-montserrat text-white font-bold text-3xl">GAME CONTROLLER</h1>
                 </div>
 
-                <div className="bg-white w-6/12 py-8">
+                <div className="bg-white w-2/4 py-8 md-1080:w-4/6 md-810:w-10/12">
 
                     <div className="settings flex flex-row justify-between px-8 mb-8">
-                        {/* <img 
-                        src={Settings}
-                        alt="settings" 
-                        className="w-10 h-10"
-                        /> */}
-
+                        
                         <div className="back-btn">
-                            <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2">
+                            <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2 text-xl">
                                 <i class="fa-sharp fa-solid fa-arrow-left text-black text-2xl"></i>
                                 Go Back
                             </button>
@@ -136,7 +131,7 @@ export default function Controller_2() {
 
                     <div className="">
                         <form action="#" onSubmit={handleSubmit}>
-                            <div className="form__group flex flex-col border">
+                            <div className="form__group flex flex-col">
                                 {/* <label htmlFor="player name">Player Name</label> */}
                                 <div className="flex flex-col justify-center items-center gap-8 ">
                                     <input 

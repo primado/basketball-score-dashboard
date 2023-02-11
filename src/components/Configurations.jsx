@@ -84,7 +84,7 @@ export default function Config() {
                         <form action="" className="font-montserrat" onSubmit={handleSubmit}>
                           <div className="form__group w-full flex justify-between items-end px-12 mb-7">
                               <div className="back-btn">
-                                <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2">
+                                <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2 text-xl">
                                     <i class="fa-sharp fa-solid fa-arrow-left text-black text-2xl"></i>
                                     Go Back
                                 </button>
