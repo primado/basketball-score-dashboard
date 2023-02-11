@@ -1,5 +1,15 @@
 import React,{useState,useEffect} from "react";
 var address = import.meta.env.VITE_IP_ADDRESS;
+
+import { 
+  Link,
+  Routes,
+  Route,
+  useNavigate,
+  } from "react-router-dom";
+
+
+
 export default function Config() { 
     const [formData, setFormData] = useState({
         Timer: '',
@@ -9,6 +19,9 @@ export default function Config() {
       });
     
       const [socket, setSocket] = useState(null);
+
+    //navigate router
+    const navigate = useNavigate();
     
       useEffect(() => {
         const ws = new WebSocket("ws://"+address+":8082");
@@ -66,12 +79,20 @@ export default function Config() {
             <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex justify-center items-center flex-col md-810:w-screen md-810:h-screen  md-810:flex md-810:justify-start md-810:items-center md-810:py-16">
                 <h1 className="text-white text-4xl font-montserrat font-extrabold my-8">CONFIGURATION</h1>
 
-                <div className="bg-white w-7/12 py-16 max-w-4xl max-h-max rounded-lg md-810:w-10/12 md-690:px-10">
+                <div className="bg-white w-7/12 py-10 max-w-4xl max-h-max rounded-lg md-810:w-10/12 md-690:px-10">
                     <div className="container">
                         <form action="" className="font-montserrat" onSubmit={handleSubmit}>
-                            <div className="form__group w-full flex justify-end items-end pr-10 mb-7">
-                                <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-500"/>
-                            </div>
+                          <div className="form__group w-full flex justify-between items-end px-12 mb-7">
+                              <div className="back-btn">
+                                <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2">
+                                    <i class="fa-sharp fa-solid fa-arrow-left text-black text-2xl"></i>
+                                    Go Back
+                                </button>
+                              </div>
+
+                              <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-500"/>
+                          </div>
+                            
                             <div className="form__group flex justify-center items-center flex-row mb-8 gap-14">
                                 <label className="font-semibold text-2xl md-690:text-lg" htmlFor="Timer">TIMER SETTINGS</label>
                                 <input className="font-roboto form-input font-medium text-base bg-[#D9D9D9] rounded-lg" 

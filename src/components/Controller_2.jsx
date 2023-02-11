@@ -1,6 +1,13 @@
 import React, {useState,useEffect} from "react";
-import { Outlet, Link } from "react-router-dom";
+import { 
+    Link,
+    Routes,
+    Route,
+    useNavigate,
+} from "react-router-dom";
 import { Dropdown } from 'semantic-ui-react'
+
+
 
 //images
 
@@ -13,6 +20,9 @@ export default function Controller_2() {
 
     const [selectedOption, setSelectedOption] = useState('');
     const [socket, setSocket] = useState(null);
+
+    //navigate router
+    const navigate = useNavigate();
 
 
   const [formData, setFormData] = useState({
@@ -85,19 +95,26 @@ export default function Controller_2() {
     return (
 
         <div className="controller-2">
-            <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex flex-col justify-start items-center py-20">
+            <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex flex-col justify-start items-center py-20 gap-8">
                 <div className="title">
-                    <h1 className="font-montserrat text-white font-semibold text-3xl">Game Controller</h1>
+                    <h1 className="font-montserrat text-white font-bold text-3xl">GAME CONTROLLER</h1>
                 </div>
 
                 <div className="bg-white w-6/12 py-8">
 
-                    <div className="settings flex flex-row justify-end pr-8 mb-8">
+                    <div className="settings flex flex-row justify-between px-8 mb-8">
                         {/* <img 
                         src={Settings}
                         alt="settings" 
                         className="w-10 h-10"
                         /> */}
+
+                        <div className="back-btn">
+                            <button onClick={() => navigate(-1)} className="flex justify-center items-center gap-2">
+                                <i class="fa-sharp fa-solid fa-arrow-left text-black text-2xl"></i>
+                                Go Back
+                            </button>
+                        </div>
 
                         <Dropdown
                             text='Settings'
