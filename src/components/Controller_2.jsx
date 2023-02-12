@@ -201,8 +201,9 @@ export default function Controller_2() {
                                         className="bg-black text-white font-montserrat font-bold text-lg w-40 py-2 rounded-lg hover:bg-blue-700 hover:ease-in-out hover:duration-300"
                                         />
                                         <input 
-                                        type="submit" 
-                                        name="" 
+                                                                                type="button" 
+
+                                         name="" 
                                         value="Reset"
                                         onClick={handleReset}
                                         className="border-2 border-gray-600 text-black font-montserrat font-bold text-lg w-40 py-2 rounded-lg hover:bg-blue-700 hover:text-white hover:border-white hover:ease-in-out hover:duration-300"
