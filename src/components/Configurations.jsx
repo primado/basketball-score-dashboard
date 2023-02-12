@@ -24,11 +24,13 @@ export default function Config() {
     const navigate = useNavigate();
     
       useEffect(() => {
+ 
         const ws = new WebSocket("ws://"+address+":8082");
         setSocket(ws);
     
         ws.onopen = () => {
           console.log("WebSocket connection established");
+ 
         }; 
     
         ws.onmessage = (event) => {
@@ -38,8 +40,9 @@ export default function Config() {
         ws.onerror = (error) => {
           console.error(`WebSocket error: ${error}`);
         };
-    
+        
         return () => {
+          
          };
       }, []);
     

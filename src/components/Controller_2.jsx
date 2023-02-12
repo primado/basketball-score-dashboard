@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from "react";
+import "./controller-2.css";
 import { 
     Link,
     Routes,
@@ -12,15 +13,26 @@ import { Dropdown } from 'semantic-ui-react'
 //images
 
 var address = import.meta.env.VITE_IP_ADDRESS;
-
+var conn=1;
 
 
 
 export default function Controller_2() {
 
-    const [selectedOption, setSelectedOption] = useState('');
-    const [socket, setSocket] = useState(null);
+  const [showOptions, setShowOptions] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("Settings");
+  const [socket, setSocket] = useState(null);
 
+  const toggleOptions = () => {
+    setShowOptions(!showOptions);
+  };
+
+  const selectOption = (option) => {
+    setSelectedOption(option);
+    console.log(option);
+    formData.game_mode = option;
+    setShowOptions(false);
+  };
     //navigate router
     const navigate = useNavigate();
 
@@ -31,10 +43,18 @@ export default function Controller_2() {
     game_mode: '',
   });
 
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-    formData.game_mode=event.target.value;
-  };
+
+  //  const handleOptionChange = (event,data) => {
+  //   setSelectedOption(data.value);
+  //   console.log(`Selected option: ${selectedOption}`);
+  //   formData.game_mode=data.target.value;
+  // };
+
+ 
+// const handleOptionChange = (event, data) => {
+//     setSelectedOption(data.value);
+//     console.log(data.value)
+//   };
 
   const handleChange = event => {
     setFormData({
@@ -42,7 +62,8 @@ export default function Controller_2() {
       [event.target.name]: event.target.value
     });
   };
-  
+
+  console.log(formData);
   const handleSubmit = event => {
     event.preventDefault();
     console.log(formData)
@@ -63,12 +84,12 @@ export default function Controller_2() {
   };
 
   useEffect(() => {
-    const ws = new WebSocket("ws://"+address+":8083");
+     const ws = new WebSocket("ws://"+address+":8083");
     setSocket(ws);
 
     ws.onopen = () => {
       console.log("WebSocket connection established");
-    }; 
+     }; 
 
     ws.onmessage = (event) => {
       console.log(`Received data: ${event.data}`);
@@ -82,11 +103,21 @@ export default function Controller_2() {
      };
   }, []);
 
+  
+
   const handleReset = () => {
     socket.send(0);
     
   };
  
+  const con = () => {
+     formData.game_mode="multi";  
+   };
+  const co = () => {
+     formData.game_mode="single";
+    
+  };
+
   const handleStart = () => {
     socket.send(1);
     
@@ -111,22 +142,18 @@ export default function Controller_2() {
                             </button>
                         </div>
 
-                        <Dropdown
-                            text='Settings'
-                            icon='cog'
-                            floating
-                            labeled
-                            button
-                            className='icon'
-                            value={selectedOption} onChange={handleOptionChange} name="Game Modes" id="gmodes"
-                          >
-                            <Dropdown.Menu>
-                                <Dropdown.Item icon='cogs' text="Configrations" as={Link} to='/config' />
-                                <Dropdown.Item value='single' icon='user' text="Single Player"/>
-                                <Dropdown.Item value='multi' icon='users' text="Multi Player"/>
-                            </Dropdown.Menu>
-                        </Dropdown>
-
+                        <div className="dropdown">
+      <div className="selected-option" onClick={toggleOptions}>
+        {selectedOption}
+      </div>
+      {showOptions ? (
+        <ul className="options">
+          <li onClick={() => selectOption("configuration")} >Configuration</li>
+          <li onClick={() => selectOption("single")}>Single Player</li>
+          <li onClick={() => selectOption("multi")}>MultiPlayer</li>
+        </ul>
+      ) : null}
+    </div>
                     </div>
 
                     <div className="">

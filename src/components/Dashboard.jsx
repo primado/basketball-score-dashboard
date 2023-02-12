@@ -56,22 +56,18 @@ export default function Dashboard() {
        })
       .catch((error) => {
        });
-
-      //  shot = 0;
-      //  score = 0;
-      //  perfectShot = 0;
  
        }
       return () => clearInterval(intervalId);
     }, [isActive, seconds]);
 
     useEffect(() => {
-      const ws = new WebSocket("ws://"+address+":8083");
+       const ws = new WebSocket("ws://"+address+":8083");
       setSocket(ws);
   
       ws.onopen = () => {
         console.log("WebSocket connection established");
-      }; 
+       }; 
   
       ws.onmessage = (event) => {
         console.log(`Received data: ${event.data}`);
@@ -87,7 +83,10 @@ export default function Dashboard() {
         console.error(`WebSocket error: ${error}`);
       };
   
+      
+
       return () => {
+        
        };
     }, []);
 
@@ -106,11 +105,12 @@ export default function Dashboard() {
 
      
       useEffect(() => {
-        const ws = new WebSocket("ws://"+address+":8081");
+         const ws = new WebSocket("ws://"+address+":8081");
         setSocket(ws);
     
         ws.onopen = () => {
           console.log("WebSocket connection established");
+ 
         };
     
         ws.onmessage = (event) => {
@@ -136,11 +136,10 @@ export default function Dashboard() {
           console.error(`WebSocket error: ${error}`);
         };
         
-    
+         
         return () => {
-        
-          ws.close();
-        };
+           
+         };
       }, []);
 
     return (
