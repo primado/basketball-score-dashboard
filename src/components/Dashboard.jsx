@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react";
 import court from "../assets/court.jpg";
+ import 'reactjs-popup/dist/index.css';
 var d;
 var shot = 0;
 var color ='';
@@ -9,10 +10,11 @@ var address = import.meta.env.VITE_IP_ADDRESS;
 
 export default function Dashboard() {
 
-    const [seconds, setSeconds] = useState(60);
+    const [seconds, setSeconds] = useState(3);
     const [isActive, setIsActive] = useState(false);
     const [data, setData] = useState([]);
     const [socket, setSocket] = useState(null);
+ 
 
 
 
@@ -41,6 +43,8 @@ export default function Dashboard() {
           setSeconds(60);
       }
       else if (seconds === 0) {
+        setShowPopup(true);
+
         fetch('http://'+address+':5000/score', {
           method: 'POST',
           headers: {
@@ -189,6 +193,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                         </div>
+                       
                                     <p className="font-semibold text-4xl text-white">{data.player_name1}</p>
                         <div className="clock">
                             <h2 className="text-[#fff] text-3xl text-center font-roboto font-semibold mb-2 sm-412:text-xl sm-428:text-xl"

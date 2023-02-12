@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from "react";
 import "./controller-2.css";
+
 import { 
     Link,
     Routes,
@@ -22,6 +23,8 @@ export default function Controller_2() {
   const [showOptions, setShowOptions] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Settings");
   const [socket, setSocket] = useState(null);
+
+
 
   const toggleOptions = () => {
     setShowOptions(!showOptions);
@@ -126,6 +129,7 @@ export default function Controller_2() {
     return (
 
         <div className="controller-2">
+
             <section className="bg-home-bg bg-no-repeat bg-center bg-cover w-screen h-screen flex flex-col justify-start items-center py-20 gap-8">
                 <div className="title">
                     <h1 className="font-montserrat text-white font-bold text-3xl">GAME CONTROLLER</h1>
@@ -148,7 +152,11 @@ export default function Controller_2() {
       </div>
       {showOptions ? (
         <ul className="options">
-          <li onClick={() => selectOption("configuration")} >Configuration</li>
+          <li>
+            <Link to="/config">
+              <div>Configuration</div>
+            </Link>
+          </li>
           <li onClick={() => selectOption("single")}>Single Player</li>
           <li onClick={() => selectOption("multi")}>MultiPlayer</li>
         </ul>
