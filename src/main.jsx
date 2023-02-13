@@ -11,6 +11,7 @@ import Controller from './components/controller';
 import Controller_2 from './components/Controller_2';
 import Config from './components/Configurations';
 import Leaderboard from './components/Leaderboard';
+import Multi_Dashboard from './components/Multi_Dashboard';
 import './index.css'
 import 'semantic-ui-css/semantic.min.css'
 
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+
+  {
+    path: "/multi-player",
+    element: <Multi_Dashboard />,
   },
 
   {
