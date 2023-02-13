@@ -185,7 +185,7 @@ export default function Dashboard() {
 
                     <div className="flex flex-col gap-20">
 
-                       <div className="flex justify-between mx-32 sm:gap-10">
+                       <div className="flex justify-between pt-12 px-28 sm:gap-10">
                        <div className="img-container">
                             <img className="w-40 sm:w-25 md:bg-red-400 block border border-[#fff] m-auto sm-360:w-48 sm-412:w-48 md-810:w-52"
                             src={court} alt="Basket Ball Court"/>
@@ -205,35 +205,37 @@ export default function Dashboard() {
                             </div>
                         </div>
                        </div>
-                      <div className="flex justify-between mx-16 items-center" >  
-                          
-                      <div className="score-container">
+
+
+                      <div className="flex justify-between items-center fixed bottom-10 w-full px-24" >  
+                           
+                        <div className="score-container">
                             <div className="score">
 
-                                <h2 className="text-[#fff] text-3xl text-center mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
-                                > SCORE
-                                </h2>
+                                  <h2 className="text-[#fff] text-3xl text-center mb-2 font-roboto font-semibold sm-412:text-xl sm-428:text-xl"
+                                  > SCORE
+                                  </h2>
 
-                                <div className="score-data  text-[#000] font-black font-roboto text-center text-9xl  bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60 sm-412:w-36 sm-412:h-40 sm-412:text-5xl sm-428:w-36 sm-428:h-40 sm-428:text-5xl"
-                                >
-                                    {score}
-                                </div>
-                            </div>
-                        </div>
-                       
-                                    <p className="font-semibold text-4xl text-white">{data.player_name1}</p>
-                        <div className="clock">
-                            <h2 className="text-[#fff] text-3xl text-center font-roboto font-semibold mb-2 sm-412:text-xl sm-428:text-xl"
-                            > SHOT CLOCK
-                            </h2>
-                            <div className="clock-data text-[#000] font-roboto font-black text-center text-9xl bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60 sm-412:w-36 sm-412:h-40 sm-412:text-5xl sm-428:w-36 sm-428:h-40 sm-428:text-5xl"
-                            >
-                                {seconds}
-                            </div>
-                        </div>
+                                  <div className="score-data  text-[#000] font-black font-roboto text-center text-9xl  bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60 sm-412:w-36 sm-412:h-40 sm-412:text-5xl sm-428:w-36 sm-428:h-40 sm-428:text-5xl"
+                                  >
+                                      {score}
+                                  </div>
+                              </div>
+                          </div>
 
+                                      <p className="font-semibold text-4xl text-white">{data.player_name1}</p>
+                          <div className="clock">
+                              <h2 className="text-[#fff] text-3xl text-center font-roboto font-semibold mb-2 sm-412:text-xl sm-428:text-xl"
+                              > SHOT CLOCK
+                              </h2>
+                              <div className="clock-data text-[#000] font-roboto font-black text-center text-9xl bg-bg_white flex justify-center items-center w-72 h-60 max-w-[18rem] max-h-60 sm-412:w-36 sm-412:h-40 sm-412:text-5xl sm-428:w-36 sm-428:h-40 sm-428:text-5xl"
+                              >
+                                  {seconds}
+                              </div>
+                          </div>
+
+                        </div>
                       </div>
-                    </div>
                 
                 </div>
             </section>
