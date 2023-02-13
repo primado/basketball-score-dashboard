@@ -16,16 +16,14 @@ import { Dropdown } from 'semantic-ui-react'
 
 var address = import.meta.env.VITE_IP_ADDRESS;
 const WS_URL = 'ws://'+address+':8083'
-var conn=1;
-
+ 
 
 
 export default function Controller_2() {
 
   const [showOptions, setShowOptions] = useState(false);
   const [selectedOption, setSelectedOption] = useState("Settings");
-  const [socket, setSocket] = useState(null);
-
+ 
 
 
   const toggleOptions = () => {
@@ -104,14 +102,6 @@ export default function Controller_2() {
 
   const handleReset = () => {
      sendMessage(0);
-  };
- 
-  const con = () => {
-     formData.game_mode="multi";  
-   };
-  const co = () => {
-     formData.game_mode="single";
-    
   };
 
   const handleStart = () => {
