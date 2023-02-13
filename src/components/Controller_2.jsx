@@ -151,14 +151,21 @@ export default function Controller_2() {
                             {selectedOption}
                           </div>
                           {showOptions ? (
-                            <ul className="options">
+                            <ul className="options w-40">
                               <li>
-                                <Link to="/config" className="text-base font-montserrat font-semibold text-black hover:text-blue-700">
-                                  Configuration
+                                <Link to="/config" className="flex flex-row gap-2 justify-start items-center text-base font-montserrat font-semibold text-black hover:text-blue-700">
+                                <i class="fa-solid fa-gear"></i>
+                                  <span>Configuration</span>
                                 </Link>
                               </li>
-                              <li onClick={() => selectOption("single")} className="text-base font-montserrat font-semibold hover:text-blue-700">Single Player</li>
-                              <li onClick={() => selectOption("multi")} className="text-base font-montserrat font-semibold hover:text-blue-700">MultiPlayer</li>
+                              <li onClick={() => selectOption("single")} className="flex flex-row gap-2 justify-start items-center text-base font-montserrat font-semibold hover:text-blue-700">
+                              <i class="fa-solid fa-user"></i>
+                                <span>Single Player</span> 
+                              </li>
+                              <li onClick={() => selectOption("multi")} className="flex flex-row gap-2 justify-start items-center text-base font-montserrat font-semibold hover:text-blue-700">
+                              <i class="fa-solid fa-user-group"></i>
+                                <span> MultiPlayer</span>
+                              </li>
                             </ul>
                           ) : null}
                         </div>
