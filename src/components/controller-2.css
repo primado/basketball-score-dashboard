@@ -1,0 +1,37 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .selected-option {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    display: none;
+  }
+  
+  .dropdown:hover .options {
+    display: block;
+  }
+  
+  .options li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options li:hover {
+    background-color: #eee;
+  }
+  

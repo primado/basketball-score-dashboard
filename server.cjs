@@ -6,30 +6,35 @@ const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('./game.db');
 const WebSocketServer = require('ws');
+require('dotenv').config();
+
 screen = {};
 screen1 = {};
 screen2 = {};
 
+var address = process.env.VITE_IP_ADDRESS;
+
 const wss = new WebSocketServer.Server({ 
     port: 8081, 
-    host:'192.168.1.100' 
+    host:address
 })
 const wss1 = new WebSocketServer.Server({ 
   port: 8082, 
-  host:'192.168.1.100' 
+  host:address 
 })
 
 const wss2 = new WebSocketServer.Server({ 
   port: 8083, 
-  host:'192.168.1.100' 
+  host:address
 })
 
-const corsOptions = {
-  origin: 'http://192.168.1.100:5173',
-  optionsSuccessStatus: 200
-}
+// const corsOptions = {
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   origin: 'http://192.168.1.100:5173',
+//   optionsSuccessStatus: 200
+// }
 
-app.use(cors(corsOptions));
+app.use(cors('*'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -54,7 +59,7 @@ wss.on("connection",(socket, req) => {
   
 });
 
-console.log("The WebSocket server is running at 192.168.1.102:8081");
+console.log("The WebSocket server is running at "+address+":8081");
 
 wss1.on("connection",(socket, req) => {
   console.log("Settings Connected")
@@ -233,5 +238,5 @@ app.post('/multiscore', (req, res) => {
   });
  
 app.listen(5000, () => {
-    console.log("Server started on port 5000")
+    console.log("Server started on port"+address+":5000")
 })
