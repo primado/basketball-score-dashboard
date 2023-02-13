@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from "react";
+import useWebSocket from 'react-use-websocket';
 import "./controller-2.css";
 
 import { 
@@ -14,6 +15,7 @@ import { Dropdown } from 'semantic-ui-react'
 //images
 
 var address = import.meta.env.VITE_IP_ADDRESS;
+const WS_URL = 'ws://'+address+':8083'
 var conn=1;
 
 
@@ -86,31 +88,22 @@ export default function Controller_2() {
        }); 
   };
 
-  useEffect(() => {
-     const ws = new WebSocket("ws://"+address+":8083");
-    setSocket(ws);
 
-    ws.onopen = () => {
-      console.log("WebSocket connection established");
-     }; 
+  const {
+    sendMessage
+  } = useWebSocket(WS_URL, {
 
-    ws.onmessage = (event) => {
+    onOpen: () => {
+      console.log('WebSocket3 connection established.');
+    },
+    onMessage:(event)=>{
       console.log(`Received data: ${event.data}`);
-    };
-
-    ws.onerror = (error) => {
-      console.error(`WebSocket error: ${error}`);
-    };
-
-    return () => {
-     };
-  }, []);
-
-  
+    },
+    shouldReconnect: (closeEvent) => true,
+  });
 
   const handleReset = () => {
-    socket.send(0);
-    
+     sendMessage(0);
   };
  
   const con = () => {
@@ -122,7 +115,8 @@ export default function Controller_2() {
   };
 
   const handleStart = () => {
-    socket.send(1);
+     sendMessage(1);
+
     
   };
 

@@ -1,18 +1,25 @@
 import React,{useState,useEffect} from "react";
+import useWebSocket from 'react-use-websocket';
 import court from "../assets/court.jpg";
 import Popup from "reactjs-popup";
 import "./dashboard.css"
 import 'reactjs-popup/dist/index.css';
+
+
 var d;
 var shot = 0;
 var color ='';
 var score = 0;
 var perfectShot=0;
- var address = import.meta.env.VITE_IP_ADDRESS;
+var address = import.meta.env.VITE_IP_ADDRESS;
+const WS_URL = 'ws://'+address+':8081'
+const WS_URL1 = 'ws://'+address+':8083'
+
+
 
 export default function Dashboard() {
 
-    const [seconds, setSeconds] = useState(60);
+    const [seconds, setSeconds] = useState(3);
     const [isActive, setIsActive] = useState(false);
     const [data, setData] = useState([]);
     const [socket, setSocket] = useState(null);
@@ -77,15 +84,13 @@ export default function Dashboard() {
       return () => clearInterval(intervalId);
     }, [isActive, seconds]);
 
-    useEffect(() => {
-       const ws = new WebSocket("ws://"+address+":8083");
-      setSocket(ws);
-  
-      ws.onopen = () => {
-        console.log("WebSocket connection established");
-       }; 
-  
-      ws.onmessage = (event) => {
+
+    useWebSocket(WS_URL1, {
+
+      onOpen: () => {
+        console.log('WebSocket2 connection established.');
+      },
+      onMessage:(event)=>{
         console.log(`Received data: ${event.data}`);
         if(event.data == 0){
           handleStop();
@@ -93,18 +98,10 @@ export default function Dashboard() {
         else if(event.data == 1){
           handleStart();
         }
-      };
-  
-      ws.onerror = (error) => {
-        console.error(`WebSocket error: ${error}`);
-      };
-  
-      
+      },
+      shouldReconnect: (closeEvent) => true,
+    });
 
-      return () => {
-        
-       };
-    }, []);
 
     const handleStart = () => { 
       setIsActive(!isActive);
@@ -114,25 +111,20 @@ export default function Dashboard() {
        shot = 0;
        score = 0;
        perfectShot = 0;
-      setIsActive(isActive);
+      //  setSeconds(60);
+      setIsActive(!isActive);
       setShowPopup(false);
     };
 
         
 
-     
-      useEffect(() => {
-         const ws = new WebSocket("ws://"+address+":8081");
-        setSocket(ws);
-    
-        ws.onopen = () => {
-          console.log("WebSocket connection established");
- 
-        };
-    
-        ws.onmessage = (event) => {
-          
-            const data = JSON.parse(event.data);
+    useWebSocket(WS_URL, {
+
+      onOpen: () => {
+        console.log('WebSocket1 connection established.');
+      },
+      onMessage:(event)=>{
+        const data = JSON.parse(event.data);
             shot = data['shot'];
             color = data['color'];
             if(color === "blue" && shot > 0){
@@ -149,18 +141,14 @@ export default function Dashboard() {
               setShowPopup3(true);
                
             }
-          
-        };
-    
-        ws.onerror = (error) => {
-          console.error(`WebSocket error: ${error}`);
-        };
         
-         
-        return () => {
-           
-         };
-      }, []);
+      },
+      shouldReconnect: (closeEvent) => true,
+    });
+
+
+     
+      
 
        
 
@@ -170,8 +158,8 @@ export default function Dashboard() {
                 <div className="main-container">
               <h1 className="text-[#fff] text-6xl text-center font-roboto font-extrabold mb-12 sm-375:mb-8 sm-425:text-base 2xl-1440:text-5xl 3xl-2560:text-5xl">SMART HOOP 
                {showPopup ? (
-              <Popup open={showPopup} position="center" >
-                <div className="gameover" >GAMEOVER</div>
+              <Popup open={showPopup} >
+              <center>  <div className="gameover" >GAMEOVER</div></center>
               </Popup>
       ) : null}
        {showPopup1 ? (

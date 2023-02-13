@@ -29,8 +29,8 @@ export default function Leaderboard() {
                         <thead>
                             <tr className="bg-[#D9D9D9] h-10">
                                 <th className="border-r border-black font-semibold">PLAYER</th>
-                                <th className="border-r border-black font-semibold">POINTS</th>
-                                <th className="border-none border-black font-semibold">PERFECT SHOTS SHOTS</th>
+                                <th className="border-r border-black font-semibold">PERFECT SHOT</th>
+                                <th className="border-none border-black font-semibold">SCORES</th>
                             </tr>
                         </thead>
                         <tbody className="font-montserrat">
