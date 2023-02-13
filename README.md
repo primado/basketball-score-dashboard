@@ -18,3 +18,5 @@ App Route:
 2. path("/controller")
 3. path("/config")
 4. path("/leaderboard")
+
+To run the full application(Frontend + Backend) use "npm run game"
