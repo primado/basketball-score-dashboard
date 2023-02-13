@@ -19,7 +19,7 @@ const WS_URL1 = 'ws://'+address+':8083'
 
 export default function Dashboard() {
 
-    const [seconds, setSeconds] = useState(3);
+    const [seconds, setSeconds] = useState(60);
     const [isActive, setIsActive] = useState(false);
     const [data, setData] = useState([]);
     const [socket, setSocket] = useState(null);
