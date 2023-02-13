@@ -93,7 +93,7 @@ export default function Config() {
                                 </button>
                               </div>
 
-                              <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:bg-blue-700 hover:text-white hover:border-none hover:ease-in-out hover:duration-500"/>
+                              <input type="submit" value="Save" name="" className="border-2 border-gray-300 font-montserrat w-36 py-2 rounded-lg text-xl font-semibold hover:border-gray-300 hover:bg-blue-700 hover:text-white hover:ease-in-out hover:duration-500"/>
                           </div>
                             
                             <div className="form__group flex justify-center items-center flex-row mb-8 gap-14">
