@@ -166,29 +166,29 @@ export default function Dashboard() {
 
     return (
         <div>
-            <section className="bg-home-bg bg-no-repeat bg-center bg-cover min-h-screen w-full sm-412:h-screen sm-412:w-screen sm-412:px-12 sm-412:py-20 sm-428:px-12 sm-428:py-20 sm-428:w-screen sm-428:h-screen md-810:h-screen md-768:w-screen md-768:h-screen md-900:w-screen md-900:h-screen md-810:py-20 md-1080:py-20">
+            <section className="bg-home-bg bg-no-repeat bg-center bg-cover py-14 min-h-screen w-full sm-412:h-screen sm-412:w-screen sm-412:px-12 sm-412:py-20 sm-428:px-12 sm-428:py-20 sm-428:w-screen sm-428:h-screen md-810:h-screen md-768:w-screen md-768:h-screen md-900:w-screen md-900:h-screen md-810:py-20 md-1080:py-20">
                 <div className="main-container">
               <h1 className="text-[#fff] text-6xl text-center font-roboto font-extrabold mb-12 sm-375:mb-8 sm-425:text-base 2xl-1440:text-5xl 3xl-2560:text-5xl">SMART HOOP 
                {showPopup ? (
               <Popup open={showPopup} position="center" >
                 <div className="gameover" >GAMEOVER</div>
               </Popup>
-      ) : null}
-       {showPopup1 ? (
-              <Popup open={showPopup1} position="center" >
-                <div className="execellent" >Execellent Shot</div>
-              </Popup>
-      ) : null}
-      {showPopup2 ? (
-              <Popup open={showPopup2} position="center" >
-                <div className="execellent" >Bank Shot</div>
-              </Popup>
-      ) : null}
-      {showPopup3 ? (
-              <Popup open={showPopup3} position="center" >
-                <div className="execellent" >MISS</div>
-              </Popup>
-      ) : null}
+              ) : null}
+               {showPopup1 ? (
+                      <Popup open={showPopup1} position="center" >
+                        <div className="execellent" >Execellent Shot</div>
+                      </Popup>
+              ) : null}
+              {showPopup2 ? (
+                      <Popup open={showPopup2} position="center" >
+                        <div className="execellent" >Bank Shot</div>
+                      </Popup>
+              ) : null}
+              {showPopup3 ? (
+                      <Popup open={showPopup3} position="center" >
+                        <div className="execellent" >MISS</div>
+                      </Popup>
+              ) : null}
       
                     {/* <button onClick={handleStartStop}>
                         {isActive ? "." : "."}

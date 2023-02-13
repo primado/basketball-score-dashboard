@@ -135,7 +135,7 @@ export default function Controller_2() {
                     <h1 className="font-montserrat text-white font-bold text-3xl">GAME CONTROLLER</h1>
                 </div>
 
-                <div className="bg-white w-2/4 py-8 md-1080:w-4/6 md-810:w-10/12">
+                <div className="bg-white w-2/4 pt-12 h-96 md-1080:w-4/6 md-810:w-10/12">
 
                     <div className="settings flex flex-row justify-between px-8 mb-8">
                         
@@ -147,21 +147,21 @@ export default function Controller_2() {
                         </div>
 
                         <div className="dropdown">
-      <div className="selected-option" onClick={toggleOptions}>
-        {selectedOption}
-      </div>
-      {showOptions ? (
-        <ul className="options">
-          <li>
-            <Link to="/config">
-              <div>Configuration</div>
-            </Link>
-          </li>
-          <li onClick={() => selectOption("single")}>Single Player</li>
-          <li onClick={() => selectOption("multi")}>MultiPlayer</li>
-        </ul>
-      ) : null}
-    </div>
+                          <div onClick={toggleOptions}  className="selected-option rounded-lg border-2 font-montserrat font-semibold text-lg">
+                            {selectedOption}
+                          </div>
+                          {showOptions ? (
+                            <ul className="options">
+                              <li>
+                                <Link to="/config" className="text-base font-montserrat font-semibold text-black hover:text-blue-700">
+                                  Configuration
+                                </Link>
+                              </li>
+                              <li onClick={() => selectOption("single")} className="text-base font-montserrat font-semibold hover:text-blue-700">Single Player</li>
+                              <li onClick={() => selectOption("multi")} className="text-base font-montserrat font-semibold hover:text-blue-700">MultiPlayer</li>
+                            </ul>
+                          ) : null}
+                        </div>
                     </div>
 
                     <div className="">
