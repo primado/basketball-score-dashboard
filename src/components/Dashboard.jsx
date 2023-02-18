@@ -207,7 +207,7 @@ export default function Dashboard() {
                        </div>
 
 
-                      <div className="flex justify-between items-center fixed bottom-10 w-full px-24" >  
+                      <div className="flex justify-between items-center fixed bottom-10 w-full px-24 md-810:bottom-60" >  
                            
                         <div className="score-container">
                             <div className="score">
