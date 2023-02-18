@@ -39,7 +39,7 @@ export default function Multi_Dashboard() {
                             </div>
                         </div>
 
-                        <div className=" fixed bottom-10  w-full">
+                        <div className=" fixed bottom-10  w-full md-810:bottom-60 ">
                             <div className=" flex flex-row justify-between gap-16 mt-12 px-20">
                                 <div className="player1-shots flex flex-col gap-4">
                                     <label htmlFor="Player 1 shots" className="text-white uppercase text-center font-bold text-5xl">
